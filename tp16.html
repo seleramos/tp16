@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla con Celdas Clickeables</title>
+</head>
+<body>
+    <h1>Tabla con Celdas Clickeables</h1>
+    
+    <table id="miTabla">
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+            <td>Celda 3</td>
+            <td>Celda 4</td>
+            <td>Celda 5</td>
+        </tr>
+    </table>
+
+    <script>
+        // Obtén todas las celdas <td> de la tabla
+        const tabla = document.getElementById("miTabla");
+        const celdas = tabla.getElementsByTagName("td");
+
+        // Agrega un evento click a cada celda <td>
+        for (let i = 0; i < celdas.length; i++) {
+            celdas[i].addEventListener("click", function() {
+                // Realiza alguna acción cuando se hace clic en la celda
+                alert("Clickeaste en la Celda " + (i + 1));
+            });
+        }
+    </script>
+</body>
+</html>
